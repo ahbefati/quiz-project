@@ -20,7 +20,10 @@ function App() {
     <div className="App">
       <progress max={10} value={curQuestionNo} />
       <h1>Question {curQuestionNo}/10</h1>
-      <Question />
+      <Question
+        question={quizData[curQuestionNo].question}
+        answers={quizData[curQuestionNo].answers}
+      />
     </div>
   ) : null;
 }
